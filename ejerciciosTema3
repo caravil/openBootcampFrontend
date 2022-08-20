@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        float valor1=10, valor2=30,valor3=40,resultado=0;
+        resultado = suma(valor1,valor2,valor3);
+        System.out.println(resultado);
+        Coche auto = new Coche();
+        auto.aumento();
+        System.out.println(auto.numPuertas);
+    }
+    
+    public static float suma(float a,float b,float c)
+    {
+         return (a+b+c);
+    }
+
+}
+
+class Coche
+{
+    int numPuertas=0;
+    public void aumento ()
+    {
+        this.numPuertas++;
+    }
+}
