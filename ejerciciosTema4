@@ -1,1 +1,63 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+    // Declaracion variables.
 
+    float numeroIf =5;
+    int nuemroWhile=0;
+    String estacion= "primavera";
+    
+    // Condicional if
+    if (numeroIf >= 1)
+    {            
+        System.out.println("el valor es positivo"); 
+    }
+    else if ( numeroIf== 0)
+    {
+        System.out.println("el valor es 0");
+    }
+    else 
+    {
+        System.out.println("el valor es negativo");
+    }
+
+    // Condicional while
+    while (nuemroWhile < 3)
+    {
+        nuemroWhile= nuemroWhile+1;
+        System.out.println(nuemroWhile);
+    } 
+    
+    // Condicional do while
+    do{
+        nuemroWhile= nuemroWhile+1;
+        System.out.println(nuemroWhile);
+    } while (nuemroWhile == 3);
+    
+    for(int numeroFor = 0; numeroFor <= 3; numeroFor += 1)
+    {
+        System.out.println(numeroFor);
+    }
+    
+    // Condicional shitch
+    switch(estacion) 
+    {
+        case "verano":
+            System.out.println("La estacion actual es: "+estacion);
+        
+        case "invierno":
+            System.out.println("La estacion actual es: "+estacion);
+            
+        case "otoño":
+            System.out.println("La estacion actual es: "+estacion);
+        
+        case "primavera":
+            System.out.println("La estacion actual es: "+estacion);
+            break;
+        default:
+            System.out.println("Estoy en default");
+    }
+    }
+}
