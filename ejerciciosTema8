@@ -1,0 +1,54 @@
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Declaracion variables.
+        String caracteres;
+
+        // Declaracion objeto.
+        Persona persona = new Persona();
+
+        // Pasamos datos a las variables con los setters.
+        persona.setNombre("alexa");
+        persona.setEdad("23");
+        persona.setTelefono("35439500");
+
+        // Solicitamos los datos a las variables con los getters.
+        // Imprimimos por consola.
+        caracteres = persona.getNombre();
+        System.out.println(caracteres);
+        caracteres = persona.getEdad();
+        System.out.println(caracteres);
+        caracteres = persona.getTelefono();
+        System.out.println(caracteres);
+    }
+}
+
+class Persona
+{
+    // Declaracion variables.
+    private String nombre,edad,telefono;
+    
+    // Declaracion Setters.
+    public void setNombre(String nombre){
+        this.nombre = nombre ;
+    }
+    public void setEdad(String edad){
+        this.edad = edad ;
+    }
+    public void setTelefono(String telefono){
+        this.telefono = telefono ;
+    }
+
+    // Declaracion getters.
+    public String getNombre(){
+        return this.nombre;
+    }
+    public String getEdad(){
+        return this.edad;
+    }
+    public String getTelefono(){
+        return this.telefono;
+    }
+}
