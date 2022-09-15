@@ -1,0 +1,106 @@
+package com.company;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Declaracion variables.
+        String caracteres;
+
+        // Declaracion objeto.
+        Cliente cliente = new Cliente();
+        Trabajador trabajador = new Trabajador();
+
+        // Pasamos datos a las variables con los setters.
+        cliente.setNombre("alexa");
+        cliente.setEdad("23");
+        cliente.setTelefono("3543957500");
+        cliente.setCredito("3'000.000");
+
+        trabajador.setNombre("camilo");
+        trabajador.setEdad("32");
+        trabajador.setTelefono("3775332100");
+        trabajador.setSalario("2'000.000");
+
+        // Solicitamos los datos a las variables con los getters.
+        // Imprimimos por consola.
+
+        caracteres = cliente.getNombre();
+        System.out.println("nombre: "+caracteres);
+        caracteres = cliente.getEdad();
+        System.out.println("edad: "+caracteres);
+        caracteres = cliente.getTelefono();
+        System.out.println("telefono: "+caracteres);
+        caracteres = cliente.getCredito();
+        System.out.println("credito activo: "+caracteres);
+
+        caracteres = trabajador.getNombre();
+        System.out.println("nombre: "+caracteres);
+        caracteres = trabajador.getEdad();
+        System.out.println("edad: "+caracteres);
+        caracteres = trabajador.getTelefono();
+        System.out.println("telefono: "+caracteres);
+        caracteres = trabajador.getSalario();
+        System.out.println("Salario actual: "+caracteres);
+    }
+}
+
+class Persona
+{
+    // Declaracion variables.
+    private String nombre,edad,telefono;
+
+    // Declaracion Setters.
+    public void setNombre(String nombre){
+        this.nombre = nombre ;
+    }
+    public void setEdad(String edad){
+        this.edad = edad ;
+    }
+    public void setTelefono(String telefono){
+        this.telefono = telefono ;
+    }
+
+    // Declaracion getters.
+    public String getNombre(){
+        return this.nombre;
+    }
+    public String getEdad(){
+        return this.edad;
+    }
+    public String getTelefono(){
+        return this.telefono;
+    }
+}
+
+class Cliente extends Persona
+{
+    // Declaracion variables.
+    private String credito;
+
+    // Declaracion Setters.
+    public void setCredito(String telefono){
+        this.credito = telefono ;
+    }
+
+    // Declaracion getters.
+    public String getCredito(){
+        return this.credito;
+    }
+}
+
+class Trabajador extends Persona
+{
+    // Declaracion variables.
+    private String salario;
+
+    // Declaracion Setters.
+    public void setSalario(String telefono){
+        this.salario = telefono ;
+    }
+
+    // Declaracion Getters.
+    public String getSalario(){
+        return this.salario;
+    }
+}
